@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+
+body {
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tasks{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 520px
+}

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    gap: 300px;
+}
+
+.left{
+    display: flex;
+    gap: 10px;
+}
+
+.right{
+    display: flex;
+    gap: 10px;
+}
+
+.btn{
+    border: none;
+}
+
+.btn:hover{
+    outline: 1px solid rgb(108, 99, 255);
+}
+
+.btn:active{
+    outline: 1px solid rgb(108, 99, 255);
+}
+
+.cheked{
+    text-decoration:line-through;
+}
