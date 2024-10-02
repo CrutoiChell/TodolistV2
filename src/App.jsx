@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './App.module.css'
 import { randomId } from '../random';
-import { Task } from './components/Task/Task';
+import { Task } from './Components/Task/Task';
 import { Input } from './Components/Input/Input';
 
 
@@ -87,10 +87,10 @@ export default function App() {
                 key={item.id}
                 id={item.id}
                 text={item.text}
-                handleDelite={handleDelite}
-                handleTogle={handleTogle}
                 isEdit={item.isEdit}
                 isChecked={item.isChecked}
+                handleDelite={handleDelite}
+                handleTogle={handleTogle}
                 handleEdit={handleEdit}
                 handleTogleCheck={handleTogleCheck}
               />
