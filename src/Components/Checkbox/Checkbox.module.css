@@ -1,0 +1,39 @@
+.checkboxWrapper {
+    display: block;
+    position: relative;
+    margin: 8px 0;
+    width: 26px;
+    height: 26px;
+    padding-left: 26px;
+}
+
+.checkboxElement {
+    appearance: none;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    margin: 0;
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgb(108, 99, 255);
+    border-radius: 3px;
+}
+
+.checkboxElement:checked {
+    background-color: rgb(108, 99, 255);
+}
+
+.checkboxElement:checked::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    width: 3px;
+    height: 8px;
+    border: 2px solid transparent;
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+    transform-origin: 50% 50%;
+    transform: rotate(35deg);
+}

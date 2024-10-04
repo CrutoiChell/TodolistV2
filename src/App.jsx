@@ -32,6 +32,9 @@ export default function App() {
   function handleDelite(id) {
     let copy = arr.filter(elem => elem.id !== id)
     setArr(copy)
+    let str = JSON.stringify(copy)
+    localStorage.setItem('arr', str)
+    return item;
   }
 
   function handleTogle(id) {
@@ -40,10 +43,10 @@ export default function App() {
       if (item.id === id) {
         item.isEdit = !item.isEdit;
       }
-      let str = JSON.stringify(copy)
-      localStorage.setItem('arr', str)
       return item;
     }));
+    let str = JSON.stringify(copy)
+    localStorage.setItem('arr', str)
   }
 
   function handleTogleCheck(id) {
@@ -52,10 +55,10 @@ export default function App() {
       if (item.id === id) {
         item.isChecked = !item.isChecked;
       }
-      let str = JSON.stringify(copy)
-      localStorage.setItem('arr', str)
       return item;
     }));
+    let str = JSON.stringify(copy)
+    localStorage.setItem('arr', str)
   }
 
   function handleEdit(id, field, event) {
