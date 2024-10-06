@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './App.module.css'
-import { randomId } from '../random';
-import { Task } from './Components/Task/Task';
+import { randomId } from './helpers/random';
+import { Tasks } from './Components/Tasks/Tasks';
 import { Input } from './Components/Input/Input';
 
 
@@ -34,7 +34,6 @@ export default function App() {
     setArr(copy)
     let str = JSON.stringify(copy)
     localStorage.setItem('arr', str)
-    return item;
   }
 
   function handleTogle(id) {
@@ -78,28 +77,18 @@ export default function App() {
     <>
       <main className={styles.container}>
         <h1>TODO LIST</h1>
-        <div className={styles.Tasks}>
-          <Input
-            list={list}
-            setList={setList}
-            handleAdd={handleAdd}
-          />
-          <div className={styles.tasks}>
-            {arr.map((item) => (
-              <Task
-                key={item.id}
-                id={item.id}
-                text={item.text}
-                isEdit={item.isEdit}
-                isChecked={item.isChecked}
-                handleDelite={handleDelite}
-                handleTogle={handleTogle}
-                handleEdit={handleEdit}
-                handleTogleCheck={handleTogleCheck}
-              />
-            ))}
-          </div>
-        </div>
+        <Input
+          list={list}
+          setList={setList}
+          handleAdd={handleAdd}
+        />
+        <Tasks
+          arr={arr}
+          handleDelite={handleDelite}
+          handleTogle={handleTogle}
+          handleEdit={handleEdit}
+          handleTogleCheck={handleTogleCheck}
+        />
       </main>
     </>
   )

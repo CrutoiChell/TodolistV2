@@ -6,10 +6,10 @@
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 30px;
-    gap: 300px;
+    gap: 100px;
 }
 
 .left {
@@ -26,12 +26,21 @@
 .btn {
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .cheked {
+    width: 420px;
     text-decoration: line-through;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
+.nocheked{
+    width: 420px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .btnTrash {
     composes: btn;
 }
@@ -49,12 +58,30 @@
 }
 
 .input {
+    text-decoration: line-through;
+    width: 420px;
+    height: 26px;
     border-radius: 5px;
     border: none;
     padding-left: 16px;
     background-color: rgb(247, 247, 247);
     outline: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
+
+.inputCheked {
+    width: 420px;
+    height: 26px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 16px;
+    background-color: rgb(247, 247, 247);
+    outline: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 
 .input:hover{
     outline: 1px solid rgb(108, 99, 255);

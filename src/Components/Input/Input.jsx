@@ -3,7 +3,7 @@ export function Input({ list, setList, handleAdd }) {
     return (
         <div className={styles.container}>
             <input
-                placeholder='Создать новую заметку...'
+                placeholder='Create a new note...'
                 className={styles.input}
                 value={list} 
                 onChange={event => setList(event.target.value)}

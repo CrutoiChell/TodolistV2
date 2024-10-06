@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -7,11 +9,10 @@
 
 body {
     background-color: rgb(226, 226, 226);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 100px;
     gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 h1{
@@ -19,9 +20,6 @@ h1{
     margin-bottom: 25px;
 }
 
-.tasks{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 520px
+.container{
+    margin-top: 100px;
 }

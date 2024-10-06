@@ -5,35 +5,34 @@
     width: 26px;
     height: 26px;
     padding-left: 26px;
+    border: 1px solid rgb(108, 99, 255);
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .checkboxElement {
-    appearance: none;
-    position: absolute;
-    top: 2px;
-    left: 0;
-    margin: 0;
-    width: 26px;
-    height: 26px;
-    border: 1px solid rgb(108, 99, 255);
-    border-radius: 3px;
+    display: none;
+    position: relative;
 }
 
-.checkboxElement:checked {
+.checkboxElement:checked+.checkboxWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgb(108, 99, 255);
 }
 
-.checkboxElement:checked::before {
+.checkboxElement:checked+.checkboxWrapper::after {
     content: "";
-    display: block;
     position: absolute;
     top: 4px;
-    left: 8px;
-    width: 3px;
-    height: 8px;
-    border: 2px solid transparent;
-    border-bottom-color: #fff;
-    border-right-color: #fff;
-    transform-origin: 50% 50%;
-    transform: rotate(35deg);
+    left: 5px;
+    width: 14px;
+    height: 7px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
 }
