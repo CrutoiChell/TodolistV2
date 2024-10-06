@@ -10,7 +10,7 @@ export function Task({ id, text, isEdit, isChecked, handleDelite, handleEdit, ha
           id={id}
           handleTogleCheck={handleTogleCheck}
         />
-        {isEdit ? <input className={`${isChecked ? styles.input : styles.inputCheked} ${theme ? styles.wordsWhite : styles.wordsDark}`} 
+        {isEdit ? <input className={`${isChecked ?styles.inputCheked  : styles.input} ${theme ? styles.inputDark : ''}`} 
         value={text} 
         onChange={event => handleEdit(id, 'text', event)} /> : <p className={`${isChecked ? styles.cheked : styles.nocheked} ${theme ? styles.wordsWhite : styles.wordsDark}`}><b>{text}</b></p>}
       </div>
