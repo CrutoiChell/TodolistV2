@@ -1,6 +1,6 @@
 import styles from "./Task.module.css";
 import { Checkbox } from "../Checkbox/Checkbox";
-export function Task({ id, text, isEdit, isChecked, handleDelite, handleEdit, handleTogle, handleTogleCheck }) {
+export function Task({ id, text, isEdit, isChecked, handleDelite, handleEdit, handleTogle, handleTogleCheck,theme }) {
 
   return (
     <li className={styles.container} key={id}>
@@ -10,7 +10,9 @@ export function Task({ id, text, isEdit, isChecked, handleDelite, handleEdit, ha
           id={id}
           handleTogleCheck={handleTogleCheck}
         />
-        {isEdit ? <input className={isChecked ? styles.input : styles.inputCheked} value={text} onChange={event => handleEdit(id, 'text', event)} /> : <p className={isChecked ? styles.cheked : styles.nocheked}><b>{text}</b></p>}
+        {isEdit ? <input className={`${isChecked ? styles.input : styles.inputCheked} ${theme ? styles.wordsWhite : styles.wordsDark}`} 
+        value={text} 
+        onChange={event => handleEdit(id, 'text', event)} /> : <p className={`${isChecked ? styles.cheked : styles.nocheked} ${theme ? styles.wordsWhite : styles.wordsDark}`}><b>{text}</b></p>}
       </div>
       <div className={styles.left}>
         <button className={styles.btnEdit} onClick={() => handleTogle(id)}>

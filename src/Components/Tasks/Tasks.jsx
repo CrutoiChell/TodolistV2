@@ -1,7 +1,7 @@
 import styles from "./Tasks.module.css";
 import { Task } from '../Task/Task'
-export function Tasks({ arr, handleDelite, handleEdit, handleTogle, handleTogleCheck }) {
-    
+export function Tasks({ arr, handleDelite, handleEdit, handleTogle, handleTogleCheck, theme }) {
+
     return (
         <ul className={styles.container}>
             {
@@ -16,6 +16,7 @@ export function Tasks({ arr, handleDelite, handleEdit, handleTogle, handleTogleC
                         handleTogle={handleTogle}
                         handleEdit={handleEdit}
                         handleTogleCheck={handleTogleCheck}
+                        theme={theme}
                     />
                 ))
             }

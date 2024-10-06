@@ -14,13 +14,13 @@
     font-size: 18px;
 }
 
-.btn:hover{
+.btn:hover {
     outline: 2px solid rgb(255, 255, 255);
     transition: all 0.5s ease-out;
     cursor: pointer;
 }
 
-.btn:focus{
+.btn:focus {
     outline: 2px solid rgb(255, 255, 255);
     transition: all 0.5s ease-out;
 }
@@ -35,7 +35,18 @@
     outline: white;
 }
 
-.input::placeholder {
+.Darkinput {
+    width: 592px;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 16px;
+    background-color: #383838;
+    outline: white;
+    color:rgb(247, 247, 247) ;
+}
+
+.input::placeholder, .Darkinput::placeholder {
     width: 592px;
     height: 38px;
     border-radius: 5px;
@@ -43,19 +54,39 @@
     color: rgb(195, 193, 230);
 }
 
-.input:hover{
+.input:hover, .Darkinput:hover {
     outline: 1px solid rgb(108, 99, 255);
     transition: all 0.5s ease-out;
 }
 
-input:focus{
+input:focus, .Darkinput:focus {
     outline: 1px solid rgb(108, 99, 255);
     transition: all 0.5s ease-out;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 26px;
+}
+
+.theme {
+    border-radius: 5px;
+    background: rgb(108, 99, 255);
+    width: 38px;
+    height: 38px;
+    border: none;
+    font-size: 18px;
+}
+
+.theme:hover {
+    outline: 2px solid rgb(255, 255, 255);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.theme:focus {
+    outline: 2px solid rgb(255, 255, 255);
+    transition: all 0.5s ease-out;
 }

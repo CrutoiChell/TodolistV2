@@ -36,11 +36,20 @@
     overflow: hidden;
 }
 
-.nocheked{
+.nocheked {
     width: 420px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+.wordsWhite {
+    color: rgb(247, 247, 247);
+}
+
+.wordsDark {
+    color: #383838;
+}
+
 .btnTrash {
     composes: btn;
 }
@@ -83,12 +92,12 @@
 }
 
 
-.input:hover{
+.input:hover {
     outline: 1px solid rgb(108, 99, 255);
     transition: all 0.5s ease-out;
 }
 
-input:focus{
+input:focus {
     outline: 1px solid rgb(108, 99, 255);
     transition: all 0.5s ease-out;
 }

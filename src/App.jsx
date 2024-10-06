@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './App.module.css'
 import { randomId } from './helpers/random';
 import { Tasks } from './Components/Tasks/Tasks';
 import { Input } from './Components/Input/Input';
 
-
 // localStorage.clear()
 
 let arr2
+
+let nowtheme;
 
 if (localStorage.getItem('arr')) {
   arr2 = JSON.parse(localStorage.getItem('arr'))
@@ -15,9 +16,28 @@ if (localStorage.getItem('arr')) {
   arr2 = []
 }
 
+if (localStorage.getItem('theme')) {
+  nowtheme = JSON.parse(localStorage.getItem('theme'))
+} else{
+  nowtheme = false
+}
+
 export default function App() {
   const [list, setList] = useState('');
   const [arr, setArr] = useState(arr2)
+  const [theme, setTheme] = useState(nowtheme)
+
+  if (theme == false) {
+    document.body.style.backgroundColor = 'rgb(226, 226, 226)';
+    let copy = theme
+    let str = JSON.stringify(copy)
+    localStorage.setItem('theme', str)
+  } else {
+    document.body.style.backgroundColor = '#252525';
+    let copy = theme
+    let str = JSON.stringify(copy)
+    localStorage.setItem('theme', str)
+  }
 
   function handleAdd() {
     if (list.trim()) {
@@ -76,11 +96,13 @@ export default function App() {
   return (
     <>
       <main className={styles.container}>
-        <h1>TODO LIST</h1>
+        <h1 className={theme ? styles.dark : styles.white}>TODO LIST</h1>
         <Input
           list={list}
           setList={setList}
           handleAdd={handleAdd}
+          setTheme={setTheme}
+          theme={theme}
         />
         <Tasks
           arr={arr}
@@ -88,6 +110,7 @@ export default function App() {
           handleTogle={handleTogle}
           handleEdit={handleEdit}
           handleTogleCheck={handleTogleCheck}
+          theme={theme}
         />
       </main>
     </>
